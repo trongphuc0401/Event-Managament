@@ -1,0 +1,54 @@
+
+ˆ	java:S112_"FDefine and throw a dedicated exception instead of using a generic one.(‹Æï¾8²¿—Í„2J$748ec71e-a2e9-416b-8ee2-36a93552f56c
+	java:S112s"FDefine and throw a dedicated exception instead of using a generic one.(ûœãõøÿÿÿÿ8Á¿—Í„2J$119aac99-b08d-4afa-9eff-74b39bbb66d1
+ˆ	java:S112–"FDefine and throw a dedicated exception instead of using a generic one.(Û‰ù8Ñ¿—Í„2J$a97f08ea-e7da-4f01-80ca-7e4d92597a82
+	java:S112©"FDefine and throw a dedicated exception instead of using a generic one.(ô»¸íÿÿÿÿÿ8à¿—Í„2J$f6bcd197-1dc3-4a15-a886-33520ea8ac64
+	java:S112¸"FDefine and throw a dedicated exception instead of using a generic one.(Ã¼ßàıÿÿÿÿ8à¿—Í„2J$3c083235-1950-49f4-b66c-616eb80d01cd
+§
+java:S1192€"^Define a constant instead of duplicating this literal "Not String. Please try again." 3 times.(×Úì×şÿÿÿÿ8ã¿—Í„2J$cc2ef483-ec7a-43a5-8c10-eb3bcdb90652
+¯
+java:S1319¸"fThe type of "events" should be an interface such as "List" rather than the implementation "ArrayList".(Ã¼ßàıÿÿÿÿ8ä¿—Í„2J$48d8732e-eebf-47db-a519-d39dd9845de3
+k
+java:S2189ª""Add an end condition to this loop.(˜ïˆÿÿÿÿÿ8‡À—Í„2J$6eeb8f20-5b5a-4267-b3c6-b9f6026f21ff
+É
+java:S11864"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(£©ÿ ıÿÿÿÿ8‡À—Í„2J$6591d24c-8917-4756-aa5d-36bc80fb92d3
+É
+java:S11869"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(×ÙÙêıÿÿÿÿ8‡À—Í„2J$fe5c5ddf-2002-4b6a-9f75-07b2350d4983
+r	java:S106$"+Replace this use of System.out by a logger.(£Ï·øÿÿÿÿ8ŒÀ—Í„2J$52ed08b1-2947-4ea4-bf31-a1013596edec
+r	java:S106'"+Replace this use of System.out by a logger.(Ù·×ëúÿÿÿÿ8ŒÀ—Í„2J$66cec035-a34c-4c05-9624-da1062e25b7e
+r	java:S106*"+Replace this use of System.out by a logger.(Èı¹Ëÿÿÿÿÿ8À—Í„2J$07bb00d3-99d0-432e-ae2a-2cc824c8e3ca
+r	java:S106-"+Replace this use of System.out by a logger.(Ù·×ëúÿÿÿÿ8À—Í„2J$7fd7be10-8703-4cc6-a93f-203bc8a9207d
+r	java:S106@"+Replace this use of System.out by a logger.(ó†¯úÿÿÿÿ8À—Í„2J$cd202c6b-90ef-47fe-9e83-403d6a88df58
+r	java:S106B"+Replace this use of System.out by a logger.(ŞÛÃäøÿÿÿÿ8À—Í„2J$8bb6433d-585a-458e-a60c-3c807459498d
+r	java:S106C"+Replace this use of System.out by a logger.(˜Ì‹³øÿÿÿÿ8À—Í„2J$9c584528-7cf1-4ff5-86ef-d54dc31d42ae
+r	java:S106D"+Replace this use of System.out by a logger.(Áããûÿÿÿÿ8À—Í„2J$91967c96-6e9c-4ff6-b4e5-d931637dd1fc
+r	java:S106E"+Replace this use of System.out by a logger.(…Ú†…şÿÿÿÿ8À—Í„2J$803812b9-a87d-4fea-810b-1e4fb9d73108
+r	java:S106F"+Replace this use of System.out by a logger.(‘“ù‘ûÿÿÿÿ8À—Í„2J$c9b708ce-a79a-46a0-9a38-c1dbaab8ee5e
+r	java:S106G"+Replace this use of System.out by a logger.(à¢µæùÿÿÿÿ8À—Í„2J$07ad2e85-e7a7-4235-91dc-2e3e3093cc79
+r	java:S106H"+Replace this use of System.out by a logger.(ªÓ¼áşÿÿÿÿ8À—Í„2J$91c2d648-bc07-4328-bd06-f380d331da2d
+r	java:S106O"+Replace this use of System.out by a logger.(èĞæÉşÿÿÿÿ8À—Í„2J$d4faed76-29c7-461a-b290-9d666530615a
+l	java:S106R"+Replace this use of System.out by a logger.(ñ”İ8À—Í„2J$a5678663-939d-4d83-85c5-ffea0eea45eb
+r	java:S106X"+Replace this use of System.out by a logger.(½›Üøÿÿÿÿ8À—Í„2J$2857fbd5-a5c3-4eb7-99bb-b9bd23769e46
+¯
+java:S1130_"lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(‹Æï¾8‘À—Í„2J$37e0ffd3-1296-41d9-b39b-015e0d6ea8cd
+m	java:S106c"+Replace this use of System.out by a logger.(­–ÉÔ8‘À—Í„2J$c07b8d0e-d267-443a-8116-9fb4767e2dfd
+r	java:S106f"+Replace this use of System.out by a logger.(İÄ›¶ùÿÿÿÿ8‘À—Í„2J$8c113ead-b043-474f-a835-4e65d71b1f34
+r	java:S106l"+Replace this use of System.out by a logger.(¢·ª£ûÿÿÿÿ8‘À—Í„2J$b9da6aa1-5afa-4ec4-bceb-a29b54cf773c
+´
+java:S1130s"lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(ûœãõøÿÿÿÿ8’À—Í„2J$832a7361-1aca-4055-b6e2-32df7ef62cfb
+r	java:S106w"+Replace this use of System.out by a logger.(ïûÛîıÿÿÿÿ8’À—Í„2J$c3468bcf-51e7-42b1-8a38-e9bfd8bac83a
+m	java:S106z"+Replace this use of System.out by a logger.(¬¯›ñ8’À—Í„2J$4dea8705-b096-4e6a-8e2f-dd2b7cfb7580
+s	java:S106€"+Replace this use of System.out by a logger.(×Úì×şÿÿÿÿ8“À—Í„2J$0407fb5f-7cd3-4ffe-8c1a-6631a86e7771
+¯
+java:S1130–"lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(Û‰ù8“À—Í„2J$9589b787-c8e1-4b15-8652-05a520dc25e1
+s	java:S106™"+Replace this use of System.out by a logger.(»Ê¯ üÿÿÿÿ8”À—Í„2J$31e2c5ff-a5b0-45e5-a1ee-276dd42b0c9f
+s	java:S106œ"+Replace this use of System.out by a logger.(Î©Çäûÿÿÿÿ8”À—Í„2J$b5b59c03-19be-453c-9b6a-10691c6d0de2
+s	java:S106¢"+Replace this use of System.out by a logger.(×Úì×şÿÿÿÿ8”À—Í„2J$38869c2f-41c7-40b5-b8fb-cb7ff044ac03
+µ
+java:S1130©"lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(ô»¸íÿÿÿÿÿ8•À—Í„2J$955ad9e0-6130-4aae-a093-517609b37dd8
+u
+java:S1172©",Remove this unused method parameter "event".(ô»¸íÿÿÿÿÿ8•À—Í„2J$dce259f9-a452-4fcd-b24e-cfe41735c383
+s	java:S106²"+Replace this use of System.out by a logger.(×Úì×şÿÿÿÿ8–À—Í„2J$b295a4b3-a6b6-4193-b2c0-fe055f3061d0
+µ
+java:S1130¸"lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(Ã¼ßàıÿÿÿÿ8—À—Í„2J$7195428f-4c76-46a1-9f34-fb7ffc407ee1
+s	java:S106º"+Replace this use of System.out by a logger.(éÖÀ‹ıÿÿÿÿ8—À—Í„2J$b28bd5ad-caf9-462e-95c0-9b3c1a98fe10

@@ -1,0 +1,62 @@
+
+	java:S112’"FDefine and throw a dedicated exception instead of using a generic one.(ï«ğ‘ÿÿÿÿÿ8Øó“Ë„2J$ef50d0e5-3e4d-436f-adaf-8dbb696b3071
+	java:S112¾"FDefine and throw a dedicated exception instead of using a generic one.(‘í¢Çøÿÿÿÿ8çó“Ë„2J$30ccaf65-ea5a-4e03-b034-464c4795657f
+…
+java:S1226Y"BIntroduce a new variable instead of reusing the parameter "event".(İâ›×8öó“Ë„2J$b8483cc4-22d4-4dac-a86c-06dfbd5fe959
+
+java:S2589P"7Remove this expression which always evaluates to "true"(´Ñë§şÿÿÿÿ8‘ô“Ë„2J$b32da1dd-e50f-4af6-b27f-6e920a038c6f
+É
+java:S1186 "€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ñ³ı¿ùÿÿÿÿ8’ô“Ë„2J$57baa119-96b8-4b35-8214-f07bec669dff
+r	java:S1061"+Replace this use of System.out by a logger.(„ª³ûÿÿÿÿ8˜ô“Ë„2J$c9fe05ee-4900-4545-adf2-074444374fc4
+r	java:S1064"+Replace this use of System.out by a logger.(éÖÀ‹ıÿÿÿÿ8˜ô“Ë„2J$4caae3c2-d64c-44bd-98bb-e67910fa25b3
+r	java:S1067"+Replace this use of System.out by a logger.(í­÷Ñûÿÿÿÿ8˜ô“Ë„2J$620667a4-53f7-4756-b635-181c0c866821
+r	java:S106:"+Replace this use of System.out by a logger.(Á†Á×üÿÿÿÿ8˜ô“Ë„2J$3933641b-5c5f-414a-8cf4-224c44d452ea
+€
+java:S1854L"8Remove this useless assignment to local variable "flag".(³ÖÉÿÿÿÿÿ8™ô“Ë„2J$33ac7866-8b45-4b3c-a040-3e8171de339f
+m	java:S106]"+Replace this use of System.out by a logger.(»¢îå8›ô“Ë„2J$c04e86e6-318f-4441-85d2-c7c6aaae7441
+m	java:S106c"+Replace this use of System.out by a logger.(«¦Š£8œô“Ë„2J$68fce3ef-45ca-4a71-b317-adb94e795a31
+r	java:S106e"+Replace this use of System.out by a logger.(ŞÛÃäøÿÿÿÿ8œô“Ë„2J$6e3a14b7-a4a7-4c07-8895-cc15ed24f7e0
+m	java:S106f"+Replace this use of System.out by a logger.(›¼¦¶8œô“Ë„2J$d06857aa-989a-4e7b-8f6a-cb2118a88693
+l	java:S106g"+Replace this use of System.out by a logger.(Æ˜ğK8œô“Ë„2J$eab4835f-0aa8-481d-8145-6bfff120eeeb
+l	java:S106h"+Replace this use of System.out by a logger.(ÉÃ±8œô“Ë„2J$e8423143-f055-42dd-bf35-46b1f85f6ebb
+m	java:S106i"+Replace this use of System.out by a logger.(£‡8œô“Ë„2J$6a547627-537d-4c0d-85fd-b3b5a91b3a5d
+r	java:S106j"+Replace this use of System.out by a logger.(ªÓ¼áşÿÿÿÿ8ô“Ë„2J$e7292056-5bd7-4326-a6c8-57f4351e40d3
+m	java:S106q"+Replace this use of System.out by a logger.(¨ûªª8Ÿô“Ë„2J$5a9f8812-6e58-4297-a7b8-f67ab8227313
+l	java:S106r"+Replace this use of System.out by a logger.(ğê‰U8 ô“Ë„2J$d085965f-45bc-43ec-a0d3-9fec7d4ac388
+m	java:S106s"+Replace this use of System.out by a logger.(Ùú‘ò8 ô“Ë„2J$247f773c-8c31-4d85-9550-c49f863b626b
+m	java:S106t"+Replace this use of System.out by a logger.(ãò•º8¡ô“Ë„2J$283213d5-1bdb-4521-a51f-989d11aaa29e
+r	java:S106u"+Replace this use of System.out by a logger.(ªÓ¼áşÿÿÿÿ8¢ô“Ë„2J$fb3d6f46-8675-4ac0-9c98-07f56469742e
+x
+java:S1751v"5Remove this "break" statement or make it conditional.(›ûä·8˜®–Ë„2J$67654796-612f-4ae5-b59c-8199abc4e51f
+s	java:S106"+Replace this use of System.out by a logger.(Ìğø®úÿÿÿÿ8¢ô“Ë„2J$301c4eb2-6133-4cc5-8079-5373a37829db
+m	java:S106„"+Replace this use of System.out by a logger.(ñ”İ8¢ô“Ë„2J$4807f832-eff2-44dd-8e4a-d484c18f7e81
+s	java:S106Š"+Replace this use of System.out by a logger.(½›Üøÿÿÿÿ8¤ô“Ë„2J$79efeab6-faf8-452e-a7d7-42cd6346b00d
+µ
+java:S1130’"lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(ï«ğ‘ÿÿÿÿÿ8¡ô“Ë„2J$4914b6b2-674b-41ee-ae5f-5dbec6ae8702
+n	java:S106–"+Replace this use of System.out by a logger.(¢¾Á8¥ô“Ë„2J$cc9799b6-c329-4cc7-b0a2-25d70bc55367
+s	java:S106™"+Replace this use of System.out by a logger.(İÄ›¶ùÿÿÿÿ8¦ô“Ë„2J$4fe1422a-077a-4842-8928-36baecece5d4
+s	java:S106Ÿ"+Replace this use of System.out by a logger.(×Úì×şÿÿÿÿ8¦ô“Ë„2J$01f607c6-f907-4a5c-b856-d63a5a6dca1f
+s	java:S106©"+Replace this use of System.out by a logger.(¢‹²Óúÿÿÿÿ8›®–Ë„2J$dc2eb6be-92af-4025-9ef9-9010500c688d
+~	java:S125±"<This block of commented-out lines of code should be removed.(ßó£8¤ô“Ë„2J$6a6ef4e9-c534-445c-8323-b6ef0ffed4cf
+n	java:S106µ"+Replace this use of System.out by a logger.(÷Õö8®–Ë„2J$e136f0a3-678f-4d5e-b467-527e07504388
+µ
+java:S1130¾"lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(‘í¢Çøÿÿÿÿ8¥ô“Ë„2J$7aa7bc59-685c-438b-9a91-6236c488a814
+s	java:S106Á"+Replace this use of System.out by a logger.(­æ”¨üÿÿÿÿ8®–Ë„2J$e4acaa2a-066f-4f2f-902e-2059353156e0
+s	java:S106Ä"+Replace this use of System.out by a logger.(İÄ›¶ùÿÿÿÿ8®–Ë„2J$43459005-0430-4ff9-b1ec-1575160a1730
+s	java:S106Ê"+Replace this use of System.out by a logger.(×Úì×şÿÿÿÿ8®–Ë„2J$95ea35bc-b915-4810-8d11-ed169cec7431
+~
+java:S1128";Remove this unused import 'vn.edu.likelion.entities.Guest'.(³«¡Ó8§ô“Ë„2J$5c2aeca7-e041-4960-9feb-00e85fb411fa
+
+java:S1128"<Remove this unused import 'vn.edu.likelion.util.Validation'.(ÉÍÕõ8§ô“Ë„2J$73c86e00-46ee-4a23-b9ce-9e87faff2895
+q
+java:S1128"/Remove this unused import 'java.sql.Timestamp'.(èò½+8§ô“Ë„2J$690255f4-7b11-4266-b6fa-e90bad852108
+|
+java:S1128"4Remove this unused import 'java.time.LocalDateTime'.(æÃ§ƒüÿÿÿÿ8§ô“Ë„2J$40bd5805-b8c7-43cc-8b9a-9fe2906a200b
+‚
+java:S1128"?Remove this unused import 'java.time.format.DateTimeFormatter'.(‰÷÷ª8§ô“Ë„2J$aa438f6b-2886-4b9e-a151-cdada256e475
+Œ
+java:S1128"DRemove this unused import 'java.time.format.DateTimeParseException'.(¨Ä‚Éûÿÿÿÿ8§ô“Ë„2J$06aa8264-f821-44b9-989e-cc42fb9192ad
+n
+java:S1128"+Remove this unused import 'java.util.Date'.(¸…¼ü8§ô“Ë„2J$81ef3ff5-cc19-4dba-b0e6-0a51fc3ba6c3
+
+java:S1128">Remove this unused import 'java.util.logging.SimpleFormatter'.(ÇöÁ8§ô“Ë„2J$aa5e06f6-1c74-4327-8eb5-b0e636af6349
