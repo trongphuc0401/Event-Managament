@@ -11,7 +11,7 @@ import java.util.List;
  * @return
  * @throws
  *
- * update: 1 khách hàng chỉ tham gia dược 1 sự kiện.
+ *
  */
 public class Event {
     private int id;
@@ -75,6 +75,9 @@ public class Event {
         if (guest != null && !guests.contains(guest)) {
             guests.add(guest);
         }
+    }
+    public void removeGuest(Guest guest) {
+        this.guests.remove(guest);
     }
 
     @Override

@@ -1,7 +1,7 @@
 package vn.edu.likelion.util.exception;
 
 /**
- * InvalidAgeException -
+ * InvalidAgeException
  *
  * @param
  * @return

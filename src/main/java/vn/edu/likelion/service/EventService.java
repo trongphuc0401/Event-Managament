@@ -1,17 +1,12 @@
 package vn.edu.likelion.service;
 
 import vn.edu.likelion.entities.Event;
-import vn.edu.likelion.entities.Guest;
 import vn.edu.likelion.util.Validation;
 
-import java.sql.Timestamp;
+import java.lang.reflect.Array;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
-import java.time.format.DateTimeParseException;
 import java.util.*;
-import java.util.logging.SimpleFormatter;
 
 /**
  * EventService - to handle event logic on app
@@ -21,14 +16,19 @@ import java.util.logging.SimpleFormatter;
  * @throws
  */
 public class EventService implements  EventImpl{
-    private static final int MAX_EVENTS = 5;
-    private static final int MAX_GUESTS_PER_EVENT = 3;
 
     public static ArrayList<Event> events = new ArrayList<>();
     static Scanner scanner = new Scanner(System.in);
 
     public EventService() {
     }
+
+    /**
+     * GetEvent method to get element in events
+     * @param id
+     * @param events
+     * @return
+     */
     @Override
     public Event getEvent(int id, ArrayList<Event> events) {
         for (Event e : events) {
@@ -39,45 +39,63 @@ public class EventService implements  EventImpl{
         return null;
     }
 
+    /**
+     * addEvent method use to add Event
+     * @throws Exception
+     */
     @Override
-    public void addEvent(Event event) throws Exception {
-
-
+    public void addEvent() throws Exception {
+        if (events.size() < 5) {
+            Event event = new Event();
             inputId(event);
             inputName(event);
             inputDate(event);
             inputNumberOfEvent(event);
             System.out.println("Event added successfully");
             events.add(event);
-
-
-    }
-
-
-    @Override
-    public void editEvent(int id, ArrayList<Event> events, Event event) throws Exception {
-        String name  = inputName(event);
-        String openDate = inputDate(event);
-        long numberGuest = inputNumberOfEvent(event);
-        boolean flag = false;
-        int index = -1;
-        for(Event e : events) {
-            if (e.getId() != id) {
-                event.setName(name);
-                event.setOpenDate(openDate);
-                event.setNumberGuest(numberGuest);
-                events.set(index,e);
-                flag = true;
-                System.out.println("Event updated successfully");
-                break;
-            }
-            if(!flag) {
-                throw new NullPointerException("Id not be null");
-            }
+        }else {
+            System.out.println("Event must less than 5 event");
         }
 
     }
 
+
+    /**
+     * editEvent method use to edit Event
+     * @param id
+     * @param events
+     * @throws Exception
+     */
+    @Override
+    public void editEvent(int id, ArrayList<Event> events) throws Exception {
+        boolean flag = false;
+        for (int i = 0; i < events.size(); i++) {
+            Event e = events.get(i);
+            if (e.getId() == id) {
+                String name = inputName(e);
+                String openDate = inputDate(e);
+                long numberGuest = inputNumberOfEvent(e);
+
+                e.setName(name);
+                e.setOpenDate(openDate);
+                e.setNumberGuest(numberGuest);
+
+                events.set(i, e);
+                flag = true;
+                System.out.println("Event updated successfully");
+                break;
+            }
+        }
+
+        if (!flag) {
+            System.out.println("Event with id " + id + " not found");
+        }
+    }
+
+    /**
+     * deleteEvent method use for delete a event
+     * @param id
+     */
     @Override
     public void deleteEvent(int id) {
         Event event = null;
@@ -96,6 +114,9 @@ public class EventService implements  EventImpl{
     }
 
 
+    /**
+     * showEvent method use to display list event on console
+     */
     public void showEvent() {
         int i = 0;
         System.out.println("\nEvents :");
@@ -109,21 +130,31 @@ public class EventService implements  EventImpl{
         }
     }
 
-    public void showDetailEvent(int id , Event event) {
-            if(event.getId() ==id) {
+    /**
+     * showDetailEvent method use for show a element to display on console
+     * @param id
+     */
+    public void showDetailEvent(int id , ArrayList<Event> events) {
+            if(events.contains(getEvent(id,events))) {
                 for (Event e : events) {
                     System.out.print("ID : " + e.getId() + " | ");
                     System.out.print("Name: " + e.getName() + " | ");
                     System.out.print("Open Date: " + e.getOpenDate() + " | ");
                     System.out.print("Number Guest: " + e.getNumberGuest() + " | ");
                     System.out.println();
-                    break;
                 }
             }
-
-
+            else {
+                System.out.println("Id not found");
+            }
     }
 
+    /**
+     * inputId - to enter Id in console
+     * @param event
+     * @return
+     * @throws InputMismatchException
+     */
     private static int inputId(Event event) throws InputMismatchException {
         while (true) {
             try {
@@ -143,6 +174,12 @@ public class EventService implements  EventImpl{
     }
 
 
+    /**
+     * inputName - to enter Name in console
+     * @param event
+     * @return
+     * @throws Exception
+     */
     private static String inputName(Event event) throws Exception {
 
         while (true) {
@@ -164,6 +201,12 @@ public class EventService implements  EventImpl{
     }
 
 
+    /**
+     * inputDate - to enter Open Date in console
+     * @param event
+     * @return
+     * @throws Exception
+     */
     private static String inputDate(Event event) throws Exception {
         while (true) {
             System.out.print("Enter open date for Event (dd/MM/yyyy): ");
@@ -182,15 +225,23 @@ public class EventService implements  EventImpl{
 
     }
 
+    /**
+     * inputNumberOfEvent - to enter number of event
+     * @param event
+     * @return
+     */
     private static long inputNumberOfEvent(Event event) {
         while (true) {
                 long numberGuest = Validation.validateLongInput("Enter number of Guest for Event: ");
                 if (numberGuest == 0) {
                     System.out.println("This field empty. Please try again.");
+                }else if(numberGuest > 3) {
+                    System.out.println("Number of guest maximum only 3 guest");
                 }else {
                     event.setNumberGuest(numberGuest);
                     break;
-                }
+            }
+
         }
         return event.getNumberGuest();
     }

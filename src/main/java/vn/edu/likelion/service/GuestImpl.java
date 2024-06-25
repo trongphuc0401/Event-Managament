@@ -15,9 +15,10 @@ import java.util.List;
  */
 public interface GuestImpl {
 
+
     Guest getGuest(int id, ArrayList<Guest> guests);
-    void addGuest(Guest guest, List<Event> events) throws Exception;
-    void editGuest(int id,ArrayList<Guest> guests,Guest guest);
-    void deleteGuest(int id ,Guest guest);
+    void addGuest(List<Event> events) throws Exception;
+    void editGuest(int id,ArrayList<Guest> guests,ArrayList<Event> events,Guest guest);
+    void deleteGuest(int id);
     void showAllGuests();
 }

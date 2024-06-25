@@ -19,7 +19,13 @@ public class Validation {
 
     private static Scanner scanner = new Scanner(System.in);
 
-    public static boolean checkDuplicate(int id, List<Event> events) {
+    /**
+     * checkDuplicate methodd use to check element duplicate in list
+     * @param id
+     * @param events
+     * @return
+     */
+    public static boolean checkDuplicate(int id, ArrayList<Event> events) {
        for (Event event : events) {
            if (event.getId() == id) {
                return true;
@@ -28,6 +34,11 @@ public class Validation {
         return false;
     }
 
+    /**
+     * ValidateIntInput use to check input be entered is integer type
+     * @param message
+     * @return
+     */
     public static int validateIntInput(String message) {
         int validate = 0;
         boolean validInput = false;
@@ -38,12 +49,18 @@ public class Validation {
                 validate = Integer.parseInt(input);
                 validInput = true;
             } catch (NumberFormatException e) {
-                System.out.println("Invalid input! Please enter a valid Integer.");
+                System.out.println("Invalid input! Please enter Integer type.");
             }
         } while (!validInput);
 
         return validate;
     }
+
+    /**
+     * ValidateLongInput use to check input be entered is long type
+     * @param message
+     * @return
+     */
     public static long validateLongInput(String message) {
         long validate = 0;
         boolean validInput = false;
@@ -54,27 +71,21 @@ public class Validation {
                 validate = Long.parseLong(input);
                 validInput = true;
             } catch (NumberFormatException e) {
-                System.out.println("Invalid input! Please enter a valid Integer.");
+                System.out.println("Invalid input! Please enter Long type.");
             }
         } while (!validInput);
 
         return validate;
     }
 
-    public static boolean validateGuestForEvent(String guestName, List<Event> events) {
-        for (Event event : events) {
-            for (Guest guest: event.getGuests()) {
-                if (guest.getName().equalsIgnoreCase(guestName)) {
-                    return  false;
-                }
-            }
-        }
-        return true;
-    }
-
+    /**
+     * ValidateGestAge  to check age is at least 18 years old to register
+     * @param age
+     * @throws InvalidAgeException
+     */
     public static void validateGuestAge(int age) throws InvalidAgeException {
         if (age < 18) {
-            throw new InvalidAgeException("You must be at least 18 years old to register!");
+            throw new InvalidAgeException("You must be at least 18 years old to register");
         }
     }
 

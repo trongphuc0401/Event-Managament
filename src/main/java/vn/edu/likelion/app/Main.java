@@ -5,7 +5,6 @@ import vn.edu.likelion.entities.Guest;
 import vn.edu.likelion.service.EventService;
 import vn.edu.likelion.service.GuestService;
 import vn.edu.likelion.util.Validation;
-
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -20,34 +19,32 @@ public class Main {
 
     public static EventService eventService  = new EventService();
     public static GuestService guestService =  new GuestService();
-    private static final int MAX_EVENTS = 5;
-    private static final int MAX_GUESTS_PER_EVENT = 3;
 
     public static Scanner scanner = new Scanner(System.in);
+
     public static void main(String[] args) throws Exception {
+
         ArrayList<Event> events = new ArrayList<>();
-        ArrayList<Guest> guests = new ArrayList<>();
-        Event event = new Event();
+
         Guest guest = new Guest();
-        Boolean close = false;
+
+        boolean close = false;
         String choose = "";
+
         menuConsole();
         while (true) {
             choose = scanner.nextLine();
             switch (choose) {
                 case "1":
-                    if (events.size() >= MAX_EVENTS) {
-                        System.out.println("Maximun event is "+MAX_EVENTS);
-                    }
-                    eventService.addEvent(event);
+                    eventService.addEvent();
                     break;
                 case "2":
                     int idFindEvent = Validation.validateIntInput("Enter the Id you would like to find: ");
-                    eventService.showDetailEvent(idFindEvent, event);
+                    eventService.showDetailEvent(idFindEvent,EventService.events);
                     break;
                 case "3":
                     int idEditEvent = Validation.validateIntInput("Enter the Id you would like to edit: ");
-                    eventService.editEvent(idEditEvent, events,event);
+                    eventService.editEvent(idEditEvent, EventService.events);
                     break;
                 case "4":
                     int idDeleteEvent = Validation.validateIntInput("Enter the Id you would like to delete: ");
@@ -57,22 +54,24 @@ public class Main {
                     eventService.showEvent();
                     break;
                 case "6":
-                    guestService.addGuest(guest,events);
+                    guestService.addGuest(events);
                     break;
                 case "7":
-                    guestService.showAllGuests();
+                    int idFindGuest = Validation.validateIntInput("Enter the Id you would like to find: ");
+                    guestService.showDetailEvent(idFindGuest,GuestService.guests);
                     break;
                 case "8":
                     int idEditGuest = Validation.validateIntInput("Enter the Id you would like to edit: ");
-                    guestService.editGuest(idEditGuest,guests,guest);
+                    guestService.editGuest(idEditGuest,GuestService.guests,EventService.events,guest);
                     break;
                 case "9":
-                    eventService.showEvent();
+                    int idDeleteGuest = Validation.validateIntInput("Enter the Id you would like to delete: ");
+                    guestService.deleteGuest(idDeleteGuest);
                     break;
                 case "10":
                     guestService.showAllGuests();
                     break;
-                case "11":
+                case "0":
                     close = true;
                     break;
                 default:
@@ -85,6 +84,8 @@ public class Main {
         }
 
     }
+
+
     public static void menuConsole() {
         System.out.print("##------------------ Menu-----------------##\n\n");
         System.out.print("|--------------------------------------|\n");
@@ -102,7 +103,7 @@ public class Main {
         System.out.print("| Option 9 - Delete Guest by Id        |\n");
         System.out.print("| Option 10 - Display list Guest       |\n");
         System.out.print("|                                      |\n");
-        System.out.print("| Option 8 - Exit                      |\n");
+        System.out.print("| Option 0 - Exit                      |\n");
         System.out.print("|--------------------------------------|\n");
         System.out.print("Choose something: ");
     }

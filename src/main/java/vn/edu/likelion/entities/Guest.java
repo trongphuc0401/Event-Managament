@@ -1,7 +1,6 @@
 package vn.edu.likelion.entities;
 
 import java.time.LocalDateTime;
-import java.util.Date;
 
 /**
  * Guest - to create guest object
@@ -9,6 +8,7 @@ import java.util.Date;
  * @param
  * @return
  * @throws
+ * update: 1 khách hàng chỉ tham gia dược 1 sự kiện.
  */
 public class Guest {
     private int id;

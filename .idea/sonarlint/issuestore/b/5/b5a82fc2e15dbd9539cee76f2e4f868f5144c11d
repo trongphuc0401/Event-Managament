@@ -1,61 +1,44 @@
 
-	java:S112’"FDefine and throw a dedicated exception instead of using a generic one.(ï«ğ‘ÿÿÿÿÿ8ÆŠÔ„2J$a53efa31-5f46-4d10-b3dc-4d72108dc15c
+	java:S112·"FDefine and throw a dedicated exception instead of using a generic one.(ï«ğ‘ÿÿÿÿÿ8÷º˜ñ„2J$1c8699b0-880d-43ce-9f31-ef9f31b0617f
 ®
-java:S1319"fThe type of "events" should be an interface such as "List" rather than the implementation "ArrayList".(öí‘Èıÿÿÿÿ8ŞüÌæ„2J$22951a66-6e86-484e-ae3f-0aa41acc35e0
+java:S1319"fThe type of "events" should be an interface such as "List" rather than the implementation "ArrayList".(öí‘Èıÿÿÿÿ8ùº˜ñ„2J$a2172fdb-e472-468a-988a-f741d4b6e9b7
+¯
+java:S1319‰"fThe type of "events" should be an interface such as "List" rather than the implementation "ArrayList".(ßÅúÿÿÿÿ8ùº˜ñ„2J$cb3278d7-44a9-4243-ae69-30a4c6ad6741
 š
-java:S1104"RMake events a static final constant or non-public and provide accessors if needed.(öí‘Èıÿÿÿÿ8àüÌæ„2J$f8365625-0c22-4652-a970-3041ed840374
+java:S1104"RMake events a static final constant or non-public and provide accessors if needed.(öí‘Èıÿÿÿÿ8úº˜ñ„2J$cb772e88-3339-46ba-a0c0-28deb512cbb6
 t
-java:S1444",Make this "public static events" field final(öí‘Èıÿÿÿÿ8áüÌæ„2J$6d0840cc-94e2-48a3-abac-8e936dee4477
-
-java:S2589J"7Remove this expression which always evaluates to "true"(´Ñë§şÿÿÿÿ8£ÆŠÔ„2J$11de57c0-0aad-4a64-a10a-0da7641435e5
+java:S1444",Make this "public static events" field final(öí‘Èıÿÿÿÿ8úº˜ñ„2J$eb1cff3b-3fce-4af3-accd-efe7ba95797a
 É
-java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ñ³ı¿ùÿÿÿÿ8¦ÆŠÔ„2J$ddb5184b-c4a0-49b0-bdf3-c5f05c188b36
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ñ³ı¿ùÿÿÿÿ8’»˜ñ„2J$b5b82a81-e96b-4583-ba54-e1f64e4287cd
 e
-java:S2386"Make this member "protected".(öí‘Èıÿÿÿÿ8ıÌæ„2J$dbeae524-dc72-4c0e-bca5-482422790890
-m	java:S1062"+Replace this use of System.out by a logger.(Ô¡ñ¥8¶ÆŠÔ„2J$71032862-94f3-4a82-9586-181d4496342d
-€
-java:S1854F"8Remove this useless assignment to local variable "flag".(³ÖÉÿÿÿÿÿ8±ÆŠÔ„2J$a2db317a-2555-47ec-b730-e45d68a98feb
-l	java:S106G"+Replace this use of System.out by a logger.(Àôk8·ÆŠÔ„2J$2f7a63a9-73ec-4ff8-bfc4-903b8370c4e6
-m	java:S106\"+Replace this use of System.out by a logger.(Õ÷’š8¸ÆŠÔ„2J$ec298604-1b98-481a-9da9-772321284678
-r	java:S106^"+Replace this use of System.out by a logger.(£¼ûòÿÿÿÿÿ8¹ÆŠÔ„2J$1b687efa-5402-4002-a59a-9e3e2e0ae1e0
-m	java:S106e"+Replace this use of System.out by a logger.(«¦Š£8¹ÆŠÔ„2J$6d46c649-6fca-4d90-888c-88365cd25ada
-r	java:S106g"+Replace this use of System.out by a logger.(ŞÛÃäøÿÿÿÿ8ºÆŠÔ„2J$935293b4-1b04-4221-a756-23ea7dbf0336
-m	java:S106h"+Replace this use of System.out by a logger.(›¼¦¶8»ÆŠÔ„2J$d13cc203-b3c9-43cf-a1b4-772a343a1c2b
-l	java:S106i"+Replace this use of System.out by a logger.(Æ˜ğK8¼ÆŠÔ„2J$0ea27cd7-45d6-43c6-9262-e6015379c203
-l	java:S106j"+Replace this use of System.out by a logger.(ÉÃ±8½ÆŠÔ„2J$717fe86a-25e3-4c4f-897b-4d3f23498d98
-m	java:S106k"+Replace this use of System.out by a logger.(£‡8¾ÆŠÔ„2J$d4c08c2a-e5e2-4d8e-a4f4-e05c4946736d
-r	java:S106l"+Replace this use of System.out by a logger.(ªÓ¼áşÿÿÿÿ8¾ÆŠÔ„2J$ab9ae066-ce7f-4089-ae28-2f7d185a65e4
-m	java:S106s"+Replace this use of System.out by a logger.(¨ûªª8¾ÆŠÔ„2J$f50875ba-bde6-421e-8daf-8dd4e5c75e1b
-l	java:S106t"+Replace this use of System.out by a logger.(ğê‰U8¿ÆŠÔ„2J$aee68177-3dc6-48b4-82d1-d8c202d205f1
-m	java:S106u"+Replace this use of System.out by a logger.(Ùú‘ò8ÂÆŠÔ„2J$d275311d-c9f6-4b6e-9a69-42bd12b786c0
-m	java:S106v"+Replace this use of System.out by a logger.(ãò•º8ÃÆŠÔ„2J$260d1d68-4045-45d8-8eee-61fd9666c555
-r	java:S106w"+Replace this use of System.out by a logger.(ªÓ¼áşÿÿÿÿ8ÆÆŠÔ„2J$bda1c62e-ea85-4789-8695-92d6e4450de9
-x
-java:S1751x"5Remove this "break" statement or make it conditional.(›ûä·8ÀÆŠÔ„2J$f481f495-0b20-428c-b5db-6226cb6980fb
-m	java:S106„"+Replace this use of System.out by a logger.(Å½¯28ÇÆŠÔ„2J$d383aee8-5996-4c27-ab44-888e05322138
-s	java:S106Š"+Replace this use of System.out by a logger.(½›Üøÿÿÿÿ8ÈÆŠÔ„2J$d533e09e-cba7-45f6-a001-6868656bbdfd
+java:S2386"Make this member "protected".(öí‘Èıÿÿÿÿ8”»˜ñ„2J$b65cd086-8228-45cb-8dca-10275081a272
+m	java:S1066"+Replace this use of System.out by a logger.(Ô¡ñ¥8›»˜ñ„2J$cc9a543c-3ec8-4b94-97d4-6c16f9812b10
+r	java:S1069"+Replace this use of System.out by a logger.(ıë”ïÿÿÿÿÿ8›»˜ñ„2J$ee7dce38-e634-449a-b214-6364ce31ebab
+l	java:S106U"+Replace this use of System.out by a logger.(Àôk8»˜ñ„2J$af8d347a-9bc1-4172-bfac-c64953892427
+l	java:S106["+Replace this use of System.out by a logger.(ßâŠs8»˜ñ„2J$2171d43d-e467-48cf-a5c6-c3ccf34014b3
+m	java:S106n"+Replace this use of System.out by a logger.(Õ÷’š8Ÿ»˜ñ„2J$c4045432-54b3-4b48-a58a-e8953b34ed00
+r	java:S106p"+Replace this use of System.out by a logger.(£¼ûòÿÿÿÿÿ8 »˜ñ„2J$b614446d-f649-4fda-ac99-9b289c57a6d2
+m	java:S106z"+Replace this use of System.out by a logger.(«¦Š£8 »˜ñ„2J$e5be6ac1-2edc-4c6b-8cc0-060bdf228c6c
+r	java:S106|"+Replace this use of System.out by a logger.(ŞÛÃäøÿÿÿÿ8 »˜ñ„2J$a66dad4a-dd68-4932-9a7f-75e9033a333a
+m	java:S106}"+Replace this use of System.out by a logger.(›¼¦¶8 »˜ñ„2J$46ae5f38-f62d-441e-8206-7c58acaeb88f
+l	java:S106~"+Replace this use of System.out by a logger.(Æ˜ğK8¡»˜ñ„2J$f4b5ec73-ae95-4a47-b1c9-820ce776f38d
+l	java:S106"+Replace this use of System.out by a logger.(ÉÃ±8¡»˜ñ„2J$7207c6c2-1e61-4f02-9f07-622d0aeafe35
+n	java:S106€"+Replace this use of System.out by a logger.(£‡8¡»˜ñ„2J$524bb66d-3de5-4b50-8bd4-17a4d6f70ce9
+s	java:S106"+Replace this use of System.out by a logger.(ªÓ¼áşÿÿÿÿ8¡»˜ñ„2J$a77bdb0a-d06d-434f-9977-42f19a0db81e
+n	java:S106Œ"+Replace this use of System.out by a logger.(¨ûªª8£»˜ñ„2J$ae164626-3011-4ce8-b6de-e5768b061cab
+m	java:S106"+Replace this use of System.out by a logger.(ğê‰U8£»˜ñ„2J$9e6637c1-cfb6-4a2f-95a9-10ebf40c4cb0
+n	java:S106"+Replace this use of System.out by a logger.(Ùú‘ò8£»˜ñ„2J$0275715a-dc34-4edf-91c4-caff4c799f1d
+n	java:S106"+Replace this use of System.out by a logger.(ãò•º8£»˜ñ„2J$6b7b42e8-162b-4486-b41a-34274cb3be47
+s	java:S106"+Replace this use of System.out by a logger.(ªÓ¼áşÿÿÿÿ8£»˜ñ„2J$866306d7-1edd-42e1-9beb-4650472da221
+s	java:S106”"+Replace this use of System.out by a logger.(ÎÁĞÜûÿÿÿÿ8£»˜ñ„2J$71c1495e-a884-49eb-9c2d-031ab773355c
+m	java:S106£"+Replace this use of System.out by a logger.(Å½¯28¥»˜ñ„2J$d91b2b57-035d-4514-8089-fc367904f558
+s	java:S106©"+Replace this use of System.out by a logger.(½›Üøÿÿÿÿ8¥»˜ñ„2J$987fed9e-24e5-407c-a460-c757bd9ac4be
 µ
-java:S1130’"lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(ï«ğ‘ÿÿÿÿÿ8ÅÆŠÔ„2J$d19d5610-7a70-461b-8396-1532331236c2
-n	java:S106–"+Replace this use of System.out by a logger.(…À¬8ÊÆŠÔ„2J$5ee6fb05-8408-4277-b88e-51ad770c1a10
-n	java:S106™"+Replace this use of System.out by a logger.(¬¯›ñ8ÌÆŠÔ„2J$49a5b748-4850-4587-959f-00d32bab85d4
-s	java:S106Ÿ"+Replace this use of System.out by a logger.(×Úì×şÿÿÿÿ8ÍÆŠÔ„2J$a9fbae54-c4eb-4a98-83d9-06fb9a937ef5
-s	java:S106©"+Replace this use of System.out by a logger.(©Éç¢şÿÿÿÿ8—Õ÷Õ„2J$270259cc-8c81-41b3-8f9b-487d6daef9d3
-n	java:S106±"+Replace this use of System.out by a logger.(ô˜ı…8ÀÅøÕ„2J$4893471c-b52b-4532-ad5e-040867237edd
-n	java:S106½"+Replace this use of System.out by a logger.(ú½’ª8ÁÅøÕ„2J$d55cd287-8bae-44cb-bdc5-3dc4b0b1b9b8
-~
-java:S1128";Remove this unused import 'vn.edu.likelion.entities.Guest'.(³«¡Ó8ÏÆŠÔ„2J$a6a17f62-6d66-4a12-86b5-a513afbe3c0a
-q
-java:S1128"/Remove this unused import 'java.sql.Timestamp'.(èò½+8ÏÆŠÔ„2J$d5ed83f4-f663-43f7-a164-1c89cc9dbc59
-|
-java:S1128
-"4Remove this unused import 'java.time.LocalDateTime'.(æÃ§ƒüÿÿÿÿ8ÏÆŠÔ„2J$7371a076-49ab-4752-bed2-1d6decfed511
-‚
-java:S1128"?Remove this unused import 'java.time.format.DateTimeFormatter'.(‰÷÷ª8ÏÆŠÔ„2J$77961717-a234-402a-9fe0-768bde2f551e
-Œ
-java:S1128"DRemove this unused import 'java.time.format.DateTimeParseException'.(¨Ä‚Éûÿÿÿÿ8ÏÆŠÔ„2J$5120a892-fff8-4215-9393-1e880887dd3b
-
-java:S1128">Remove this unused import 'java.util.logging.SimpleFormatter'.(ÇöÁ8ÏÆŠÔ„2J$2bdeac70-62f1-4ea9-a01f-271dc0625b1a
-v
-java:S1068".Remove this unused "MAX_EVENTS" private field.(ÆÑŸŞüÿÿÿÿ8²ÛƒÖ„2J$0566b7fa-0922-46c1-829e-16ae3bbdb7dc
-{
-java:S1068"8Remove this unused "MAX_GUESTS_PER_EVENT" private field.(¤Üıü8”»ôÕ„2J$c47539c2-3003-47d9-847d-2fc5652ba0d7
+java:S1130·"lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(ï«ğ‘ÿÿÿÿÿ8¦»˜ñ„2J$34c55714-11e4-4450-80c4-327c34a51630
+n	java:S106»"+Replace this use of System.out by a logger.(…À¬8§»˜ñ„2J$79a97f38-2ae4-4042-96d7-0fb4d81fc2e2
+n	java:S106¾"+Replace this use of System.out by a logger.(¬¯›ñ8§»˜ñ„2J$2ed4f46c-6cbe-4f52-9448-2ac0a92ea859
+s	java:S106Ä"+Replace this use of System.out by a logger.(×Úì×şÿÿÿÿ8§»˜ñ„2J$c7a1dab8-fced-4d25-a5cb-dcb5f8924296
+s	java:S106Ô"+Replace this use of System.out by a logger.(©Éç¢şÿÿÿÿ8¨»˜ñ„2J$ee58ecb9-3355-4d13-8914-84c7e58a20e4
+n	java:S106Ü"+Replace this use of System.out by a logger.(ô˜ı…8ª»˜ñ„2J$0826c1de-9263-435f-b66e-c47d85ec10da
+n	java:S106í"+Replace this use of System.out by a logger.(ú½’ª8«»˜ñ„2J$d754d4a0-56e0-4fd1-b8a2-c068d08479b7
+s	java:S106ï"+Replace this use of System.out by a logger.(ÒŠß¼øÿÿÿÿ8«»˜ñ„2J$37eb23f2-0d57-4247-8a6c-0ef2c18b8c19
