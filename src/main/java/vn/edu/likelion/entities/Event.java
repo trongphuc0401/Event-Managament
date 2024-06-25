@@ -1,6 +1,9 @@
 package vn.edu.likelion.entities;
 
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Event - To create event object
  *
@@ -15,6 +18,7 @@ public class Event {
     private String name;
     private String openDate;
     private long numberGuest;
+    private List<Guest> guests = null;
 
     public Event() {}
     public Event( int id, String name, String openDate, long numberGuest) {
@@ -22,6 +26,7 @@ public class Event {
         this.name = name;
         this.openDate = openDate;
         this.numberGuest = numberGuest;
+        this.guests = new ArrayList<>();
     }
 
     public int getId() {
@@ -54,6 +59,22 @@ public class Event {
 
     public void setNumberGuest(long numberGuest) {
         this.numberGuest = numberGuest;
+    }
+
+    public List<Guest> getGuests() {
+        if (guests == null) {
+            guests = new ArrayList<>();
+        }
+        return guests;
+    }
+
+    public void setGuests(List<Guest> guests) {
+        this.guests = guests;
+    }
+    public void addGuest(Guest guest) {
+        if (guest != null && !guests.contains(guest)) {
+            guests.add(guest);
+        }
     }
 
     @Override

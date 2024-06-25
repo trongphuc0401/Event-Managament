@@ -1,7 +1,9 @@
 
-­
-java:S1319"eThe type of "event" should be an interface such as "List" rather than the implementation "ArrayList".(ŸÜ¸÷ûÿÿÿÿ8–Ö½Ä„2J$49ca36df-6135-4c26-b480-c82c2c310882
 }
-java:S1118":Add a private constructor to hide the implicit public one.(ŒÚ²8œÖ½Ä„2J$8016498e-6d54-4b28-af66-b654c29f66cb
-„
-java:S1126"AReplace this if-then-else statement by a single return statement.(Õûˆ‡8¹§¾Ä„2J$a4bad479-e74c-4a4b-8ffa-a0cd46c8567d
+java:S1118":Add a private constructor to hide the implicit public one.(ŒÚ²8çîæÕ„2J$b7ab1a18-3240-4d94-9a0e-133c3054eb44
+m	java:S106$"+Replace this use of System.out by a logger.(ÌË§„8íîæÕ„2J$0e57ad1e-7a0b-4b4b-8b0a-a5cf0ac9889f
+m	java:S106)"+Replace this use of System.out by a logger.(“Ä¥È8íîæÕ„2J$96c6c9a3-7442-4503-82c9-a2c5cfb67638
+m	java:S1064"+Replace this use of System.out by a logger.(ÌË§„8îîæÕ„2J$fe017830-0b52-4c43-9232-6a9e5c3a3ff8
+m	java:S1069"+Replace this use of System.out by a logger.(“Ä¥È8ïîæÕ„2J$7c887ef6-b085-412c-9947-82ce92019350
+s
+java:S1128"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8õÿƒæ„2J$c86b120e-ca67-4877-aacf-7401afb9bf9b

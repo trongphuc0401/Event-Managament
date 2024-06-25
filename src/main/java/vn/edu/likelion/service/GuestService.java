@@ -2,11 +2,13 @@ package vn.edu.likelion.service;
 
 import vn.edu.likelion.entities.Event;
 import vn.edu.likelion.entities.Guest;
+import vn.edu.likelion.util.Validation;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.InputMismatchException;
+import java.util.List;
 import java.util.Scanner;
 
 /**
@@ -18,6 +20,7 @@ import java.util.Scanner;
  */
 public class GuestService implements GuestImpl {
     static ArrayList<Guest> guests = new ArrayList<>();
+
     static Scanner scanner = new Scanner(System.in);
 
     @Override
@@ -31,7 +34,7 @@ public class GuestService implements GuestImpl {
     }
 
     @Override
-    public void addGuest(Guest guest,Event event) throws Exception {
+    public void addGuest(Guest guest,List<Event> events) throws Exception {
         inputId(guest);
         System.out.println(guest.getId());
 
@@ -41,9 +44,9 @@ public class GuestService implements GuestImpl {
         inputAge(guest);
         System.out.println(guest.getAge());
 
-        inputNameEvent(guest,event);
+        inputNameEvent(guest);
         System.out.println(guest.getName());
-        inputRegisterDate(guest,event);
+        inputRegisterDate(guest,events);
         guests.add(guest);
 
     }
@@ -66,8 +69,8 @@ public class GuestService implements GuestImpl {
             System.out.print(++i + " | ");
             System.out.print("ID : " + g.getId() + " | ");
             System.out.print("Name: " + g.getName() + " | ");
-            System.out.print("Open Date: " + g.getAge() + " | ");
-            System.out.print("Number Guest: " + g.getNameEvent().getName() + " | ");
+            System.out.print("Age: " + g.getAge() + " | ");
+            System.out.print("Event Name: " + g.getNameEvent().getName() + " | ");
             System.out.print("Register Date: " + g.getRegisterDate() + " | ");
             System.out.println();
         }
@@ -97,7 +100,7 @@ public class GuestService implements GuestImpl {
         while (true) {
             try {
                 System.out.print("Enter the guest name: ");
-                String name = scanner.next();
+                String name = scanner.nextLine().trim();
                 if (name.isEmpty()) {
                     System.out.println("This feature is empty. Please try again.");
                 }else {
@@ -113,20 +116,18 @@ public class GuestService implements GuestImpl {
     }
 
     private static int inputAge(Guest guest) throws Exception {
-
         while (true) {
             try {
-                System.out.print("Enter the age guest: ");
-                int age = scanner.nextInt();
-                if (age ==0) {
+                int age = Validation.validateIntInput("Enter age of guest: ");
+                if (age == 0) {
                     System.out.println("This field is empty. Please try again.");
-                }else {
+                } else {
+                    Validation.validateGuestAge(age);
                     guest.setAge(age);
                     break;
                 }
-            }catch (Exception e){
-                System.out.println("Not String. Please try again.");
-                scanner.nextLine();
+            } catch (Exception e) {
+                System.out.println("An error occurred. Please try again.");
             }
         }
         return guest.getAge();
@@ -147,38 +148,54 @@ public class GuestService implements GuestImpl {
      * @throws Exception
      *
      */
-    private static String inputNameEvent(Guest guest,Event event) throws Exception {
+    private static String inputNameEvent(Guest guest) {
         while (true) {
-            try {
-                System.out.print("Enter the name event: ");
-                String name = scanner.next();
-                if (guest.getNameEvent().getName().equals(name)) {
-                    System.out.println("The Guest already register this event. Try again");
-                }else {
-                    guest.setNameEvent(event);
+            System.out.print("Enter the name event: ");
+            String eventName = scanner.nextLine().trim();
+
+            Event selectedEvent = null;
+            for (Event event : EventService.events) {
+                if (event.getName().equalsIgnoreCase(eventName)) {
+                    selectedEvent = event;
                     break;
                 }
-            }catch (Exception e){
-                System.out.println("Not String. Please try again.");
-                scanner.nextLine();
+            }
+            boolean isGuestAlreadyRegistered = false;
+            for (Event event : EventService.events) {
+                if (event.getGuests().contains(guest)) {
+                    isGuestAlreadyRegistered = true;
+                    break;
+                }
+            }
+            if (isGuestAlreadyRegistered) {
+                System.out.println("The Guest is already registered for an event. Try again.");
+                continue;
+            }
+
+            if (selectedEvent == null) {
+                System.out.println("Event does not exist. Please try again.");
+                continue;
+            }
+
+
+            if (selectedEvent.getGuests().isEmpty()) {
+                guest.setNameEvent(selectedEvent);
+                selectedEvent.addGuest(guest);
+                return guest.getName();
+            } else {
+                System.out.println("The event already has guests. Try another event.");
             }
         }
-        return guest.getName();
     }
+    private static LocalDateTime inputRegisterDate(Guest guest, List<Event> events) {
+        LocalDateTime registerDate = LocalDateTime.now();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
 
-    private static LocalDateTime inputRegisterDate(Guest guest,Event event) throws Exception {
-        while (true) {
-            try {
-                LocalDateTime localDateTime = LocalDateTime.now();
-                DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-                LocalDateTime localDateTime1 = LocalDateTime.parse(localDateTime.format(dateTimeFormatter), dateTimeFormatter);
-                guest.setRegisterDate(localDateTime1);
+        System.out.println("Registration date and time: " + registerDate.format(formatter));
 
-            }catch (Exception e){
-                System.out.println("Not String. Please try again.");
-                scanner.nextLine();
-            }
-        }
+        guest.setRegisterDate(registerDate);
+
+        return registerDate;
     }
 
     public static void showNameEvent(ArrayList<Event> events) throws Exception {

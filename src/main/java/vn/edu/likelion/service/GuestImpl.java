@@ -4,6 +4,7 @@ import vn.edu.likelion.entities.Event;
 import vn.edu.likelion.entities.Guest;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * GuestImpl -
@@ -15,7 +16,7 @@ import java.util.ArrayList;
 public interface GuestImpl {
 
     Guest getGuest(int id, ArrayList<Guest> guests);
-    void addGuest(Guest guest,Event event) throws Exception;
+    void addGuest(Guest guest, List<Event> events) throws Exception;
     void editGuest(int id,ArrayList<Guest> guests,Guest guest);
     void deleteGuest(int id ,Guest guest);
     void showAllGuests();

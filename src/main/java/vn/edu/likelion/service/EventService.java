@@ -3,7 +3,6 @@ package vn.edu.likelion.service;
 import vn.edu.likelion.entities.Event;
 import vn.edu.likelion.entities.Guest;
 import vn.edu.likelion.util.Validation;
-import vn.edu.likelion.util.exception.NotFoundException;
 
 import java.sql.Timestamp;
 import java.text.ParseException;
@@ -11,10 +10,7 @@ import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.InputMismatchException;
-import java.util.Scanner;
+import java.util.*;
 import java.util.logging.SimpleFormatter;
 
 /**
@@ -25,15 +21,16 @@ import java.util.logging.SimpleFormatter;
  * @throws
  */
 public class EventService implements  EventImpl{
+    private static final int MAX_EVENTS = 5;
+    private static final int MAX_GUESTS_PER_EVENT = 3;
 
-    static ArrayList<Event> events = new ArrayList<>();
+    public static ArrayList<Event> events = new ArrayList<>();
     static Scanner scanner = new Scanner(System.in);
 
     public EventService() {
     }
     @Override
     public Event getEvent(int id, ArrayList<Event> events) {
-        // làm lại coi thêm
         for (Event e : events) {
             if (e.getId() == id) {
                 return e;
@@ -45,18 +42,14 @@ public class EventService implements  EventImpl{
     @Override
     public void addEvent(Event event) throws Exception {
 
-        inputId(event);
-        System.out.println(event.getId());
 
-        inputName(event);
-        System.out.println(event.getName());
+            inputId(event);
+            inputName(event);
+            inputDate(event);
+            inputNumberOfEvent(event);
+            System.out.println("Event added successfully");
+            events.add(event);
 
-        inputDate(event);
-        System.out.println(event.getOpenDate());
-
-        inputNumberOfEvent(event);
-        System.out.println(event.getNumberGuest());
-        events.add(event);
 
     }
 
@@ -67,14 +60,15 @@ public class EventService implements  EventImpl{
         String openDate = inputDate(event);
         long numberGuest = inputNumberOfEvent(event);
         boolean flag = false;
-
+        int index = -1;
         for(Event e : events) {
             if (e.getId() != id) {
                 event.setName(name);
                 event.setOpenDate(openDate);
                 event.setNumberGuest(numberGuest);
+                events.set(index,e);
                 flag = true;
-                events.remove(e);
+                System.out.println("Event updated successfully");
                 break;
             }
             if(!flag) {
@@ -85,12 +79,20 @@ public class EventService implements  EventImpl{
     }
 
     @Override
-    public void deleteEvent(int id, Event event) throws NotFoundException {
-        event = getEvent(id, events);
+    public void deleteEvent(int id) {
+        Event event = null;
+        for (Event e : events) {
+            if (e.getId() == id) {
+                event = e;
+                break;
+            }
+        }
         if (event != null) {
             events.remove(event);
+            System.out.println("Delete event successfully");
+        } else {
+            System.out.println("Event not found with id " + id + ". Please try again");
         }
-        System.out.println("Event not found. Please enter again");
     }
 
 
@@ -123,13 +125,11 @@ public class EventService implements  EventImpl{
     }
 
     private static int inputId(Event event) throws InputMismatchException {
-
         while (true) {
             try {
-                System.out.print("Enter your id: ");
-                int id = scanner.nextInt();
-                if (event.getId() == id) {
-                    System.out.println("Duplicate ID. Please try again.");
+                int id = Validation.validateIntInput("Enter Id of event: ");
+                if (Validation.checkDuplicate(id,events)) {
+                    System.out.println("Event id already exists. Please try again");
                 }else {
                     event.setId(id);
                     break;
@@ -147,10 +147,10 @@ public class EventService implements  EventImpl{
 
         while (true) {
             try {
-                System.out.print("Enter your name: ");
-                String name = scanner.next();
+                System.out.print("Enter name of event: ");
+                String name = scanner.nextLine().trim();
                 if (name.isEmpty()) {
-                    System.out.println("This feature is empty. Please try again.");
+                    System.out.println("This field is empty. Please try again.");
                 }else {
                     event.setName(name);
                     break;
@@ -166,19 +166,15 @@ public class EventService implements  EventImpl{
 
     private static String inputDate(Event event) throws Exception {
         while (true) {
-            System.out.print("Please enter your open date(dd/MM/yyyy): ");
+            System.out.print("Enter open date for Event (dd/MM/yyyy): ");
             SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
-            String date = scanner.next();
-
+            String date = scanner.nextLine().trim();
             dateFormat.setLenient(false);
             try {
                 dateFormat.parse(date);
                 event.setOpenDate(date);
-                // if (!Validation(date)) {
-                //     return inputDate();
-                // }
             } catch (ParseException ex) {
-                System.out.println("Invalid date format. Date should be in the format dd/MM/yyyy.");
+                System.out.println("Invalid date format. Open date should be in the format dd/MM/yyyy.");
                 return inputDate(event);
             }
             return date;
@@ -186,22 +182,15 @@ public class EventService implements  EventImpl{
 
     }
 
-
-    private static long inputNumberOfEvent(Event event) throws Exception {
+    private static long inputNumberOfEvent(Event event) {
         while (true) {
-            try {
-                System.out.print("Enter number of guest: ");
-                long numberGuest = scanner.nextLong();
+                long numberGuest = Validation.validateLongInput("Enter number of Guest for Event: ");
                 if (numberGuest == 0) {
-                    System.out.println("This feature is empty. Please try again.");
+                    System.out.println("This field empty. Please try again.");
                 }else {
                     event.setNumberGuest(numberGuest);
                     break;
                 }
-            }catch (Exception e){
-                System.out.println("Not String. Please try again.");
-                scanner.nextLine();
-            }
         }
         return event.getNumberGuest();
     }

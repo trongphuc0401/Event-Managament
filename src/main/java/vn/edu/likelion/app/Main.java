@@ -4,6 +4,7 @@ import vn.edu.likelion.entities.Event;
 import vn.edu.likelion.entities.Guest;
 import vn.edu.likelion.service.EventService;
 import vn.edu.likelion.service.GuestService;
+import vn.edu.likelion.util.Validation;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -19,6 +20,8 @@ public class Main {
 
     public static EventService eventService  = new EventService();
     public static GuestService guestService =  new GuestService();
+    private static final int MAX_EVENTS = 5;
+    private static final int MAX_GUESTS_PER_EVENT = 3;
 
     public static Scanner scanner = new Scanner(System.in);
     public static void main(String[] args) throws Exception {
@@ -33,34 +36,35 @@ public class Main {
             choose = scanner.nextLine();
             switch (choose) {
                 case "1":
+                    if (events.size() >= MAX_EVENTS) {
+                        System.out.println("Maximun event is "+MAX_EVENTS);
+                    }
                     eventService.addEvent(event);
                     break;
                 case "2":
-                    System.out.print("Enter your Id you would like to find: ");
-                    int idFind = scanner.nextInt();
-                    eventService.showDetailEvent(idFind, event);
+                    int idFindEvent = Validation.validateIntInput("Enter the Id you would like to find: ");
+                    eventService.showDetailEvent(idFindEvent, event);
                     break;
                 case "3":
-                    System.out.print("Enter your Id you would like to edit: ");
-                    int idEdit = scanner.nextInt();
-                    eventService.editEvent(idEdit, events,event);
+                    int idEditEvent = Validation.validateIntInput("Enter the Id you would like to edit: ");
+                    eventService.editEvent(idEditEvent, events,event);
                     break;
                 case "4":
-                    System.out.print("Enter your Id you would like to delete: ");
-                    int idDelete = scanner.nextInt();
-                    eventService.deleteEvent(idDelete, event);
+                    int idDeleteEvent = Validation.validateIntInput("Enter the Id you would like to delete: ");
+                    eventService.deleteEvent(idDeleteEvent);
                     break;
                 case "5":
                     eventService.showEvent();
                     break;
                 case "6":
-                    guestService.addGuest(guest,event);
+                    guestService.addGuest(guest,events);
                     break;
                 case "7":
-                    eventService.showEvent();
+                    guestService.showAllGuests();
                     break;
                 case "8":
-                    eventService.showEvent();
+                    int idEditGuest = Validation.validateIntInput("Enter the Id you would like to edit: ");
+                    guestService.editGuest(idEditGuest,guests,guest);
                     break;
                 case "9":
                     eventService.showEvent();
@@ -68,7 +72,6 @@ public class Main {
                 case "10":
                     guestService.showAllGuests();
                     break;
-
                 case "11":
                     close = true;
                     break;
