@@ -1,13 +1,13 @@
 
 ©
-java:S1319"fThe type of "events" should be an interface such as "List" rather than the implementation "ArrayList".(ØÕ±8ıìÔê„2J$a07d8828-7f57-464e-8b35-bc0750b274eb
+java:S1319"fThe type of "events" should be an interface such as "List" rather than the implementation "ArrayList".(ØÕ±8ıìÔê„2J$39070f6c-8b05-4f94-bfe1-217d1d2ea271
 }
-java:S1118":Add a private constructor to hide the implicit public one.(ŒÚ²8çîæÕ„2J$eff05686-96b7-4df5-a383-34a95a8cc18c
-m	java:S106/"+Replace this use of System.out by a logger.(ÌË§„8íîæÕ„2J$f1822b78-67d7-45f5-85bf-19256428c053
-l	java:S1064"+Replace this use of System.out by a logger.(ìÚÂ8íîæÕ„2J$5b2a60db-7e39-42e4-97e7-ea7c4fb7be14
-m	java:S106E"+Replace this use of System.out by a logger.(ÌË§„8îîæÕ„2J$5428d2f9-2726-4c56-86de-83985a0141e4
-m	java:S106J"+Replace this use of System.out by a logger.(éú­¦8ïîæÕ„2J$80ede219-5281-4e2f-9b4d-e17fa36a0c00
+java:S1118":Add a private constructor to hide the implicit public one.(ŒÚ²8çîæÕ„2J$9ccf6094-e772-4581-a487-dd88f83da6e1
+m	java:S106/"+Replace this use of System.out by a logger.(ÌË§„8íîæÕ„2J$2887ee14-18b5-4520-93a2-283be9f3ae75
+l	java:S1064"+Replace this use of System.out by a logger.(ìÚÂ8íîæÕ„2J$dfee6f00-e254-41b0-a196-907d8fc6b949
+m	java:S106E"+Replace this use of System.out by a logger.(ÌË§„8îîæÕ„2J$732d19f2-14d9-4ca0-ae38-adf7aca4f4d1
+m	java:S106J"+Replace this use of System.out by a logger.(éú­¦8ïîæÕ„2J$17d31c9d-bb88-4284-b568-f7a98f82332e
 ~
-java:S1128";Remove this unused import 'vn.edu.likelion.entities.Guest'.(³«¡Ó8 òÌó„2J$2fff953a-33e9-4626-939c-1bb208180258
+java:S1128";Remove this unused import 'vn.edu.likelion.entities.Guest'.(³«¡Ó8Ü­—ô„2J$f7a81d15-8dc9-4c6a-97c4-ce3eb8373dad
 s
-java:S1128"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8 òÌó„2J$745e1010-88a0-4dc0-bf72-3d0b1dfcf4fe
+java:S1128"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8İ­—ô„2J$885d5656-6cd8-48c8-8655-016688cfa133
